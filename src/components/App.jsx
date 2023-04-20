@@ -11,11 +11,11 @@ export class App extends Component  {
     console.dir(e.target.name);
     switch (e.target.name) {
       case 'good':
-       return this.setState(pervState => pervState.good += 0.5);
+       return this.setState(pervState => pervState.good += 1);
       case 'neutral':
-       return this.setState(pervState => pervState.neutral += 0.5);
+       return this.setState(pervState => pervState.neutral += 1);
       case 'bad':
-       return this.setState(pervState => pervState.bad += 0.5);
+       return this.setState(pervState => pervState.bad += 1);
       default:
         throw new Error(`Unknow button name!`);
     }
