@@ -12,6 +12,7 @@ export class App extends Component  {
   }
   
   addNewFeedback = (name) => {
+    this.countTotalFeedback();
     switch (name) {
       case 'good':
        return this.setState(pervState => pervState.good += 1);
@@ -21,8 +22,7 @@ export class App extends Component  {
        return this.setState(pervState => pervState.bad += 1);
       default:
         throw new Error(`Unknow button name!`);
-    }
-    this.countTotalFeedback();
+    }  
   }
 
   countTotalFeedback = () => {
